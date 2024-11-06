@@ -10,6 +10,7 @@ exports.writeTasksToFile = (tasks) => {
         fs.writeFileSync(filePath, JSON.stringify(tasks, null, 2));
     }
 }
+
 exports.readTasksFromFile = () => {
     if(!fs.existsSync(filePath)) {
         this.writeTasksToFile([])

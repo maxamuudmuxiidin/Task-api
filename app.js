@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
   
     if (req.url.startsWith('/tasks')) {
         taskRoutes(req, res);
-      
+        // Remove redundant response since taskRoutes already handles the response
     } else {
         res.writeHead(404, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ message: 'Page not found' }));
